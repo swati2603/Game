@@ -29,7 +29,7 @@ function create() {
 
     var logo = this.physics.add.image(400, 100, 'logo');
 
-    logo.setVelocity(100, 200);
+    logo.setVelocity(100, 200); // for speed
     logo.setBounce(1, 1);
     logo.setCollideWorldBounds(true);
 

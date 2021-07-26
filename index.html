@@ -4,15 +4,73 @@
 <head>
     <title>Phaser Game</title>
     <script src="phaser.min.js"></script>
-   
-   <script src="startgamescene.js"></script>
-   <script src="playgamescene.js"></script>
-   <script src="endgamescene.js"></script>
-   <script src="spacegame.js"></script>
+
+    <script src="startgamescene.js"></script>
+    <script src="playgamescene.js"></script>
+    <script src="endgamescene.js"></script>
+    <script src="spacegame.js"></script>
+
+    <style>
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
+        .button3 {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border: 2px solid #36f4a5;
+        }
+        
+        .button3:hover {
+            background-color: #36e7f4;
+            color: white;
+        }
+        
+        .container {
+            height: 200px;
+            position: relative;
+            border: 3px solid rgb(0, 77, 128);
+        }
+        
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    </style>
+
 </head>
 
 <body>
+    <div class="container">
+        <div class="vertical-center">
+            <button onclick="myFunction()" class="button button3">Player Name</button>
+            <div>
+                <div>
+                    <p id="demo"></p>
 
+                    <script>
+                        function myFunction() {
+                            var person = prompt("Please enter your name", "Aditya");
+                            if (person != null) {
+                                document.getElementById("demo").innerHTML =
+                                    "Welcome to SpaceX Shooter";
+                            }
+                        }
+                    </script>
 </body>
 
 </html>

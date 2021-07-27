@@ -3,13 +3,14 @@ class playgamescene extends Phaser.Scene {
     constructor() {
         super('Play','Playy')
         this.score = 0;
-        this.highscore =0;
+        
     }
     
     
 /* preload function is used for loading all the images in memory*/
 preload() {
-   this.load.image('sky', 'sky.png');
+   /*this.load.image('sky', 'http://labs.phaser.io/assets/skies/space3.png');*/
+    this.load.image('sky','sky.png')
     this.load.image('jet', 'jet.png');
     this.load.image('bomb', 'bomb.png');
     this.load.image('ammo', 'ammo.png');
@@ -63,9 +64,7 @@ preload() {
     this.coinHit = this.sound.add('coinhit')
     this.endGameMusic = this.sound.add('end')
     this.scoreText = this.add.text(600, 21, 'Score : 0', { fontSize: 28, fill: '#ff0000' })  //score onboard and set coordinates
-     this.highScoreText = this.game.add.text(600, 40, 'HS: 0', {
-        fontSize: 28, fill: '#ff0000' 
-    })
+    
 }
 
 endgame(jet, bomb)
@@ -128,13 +127,7 @@ endgame(jet, bomb)
  }
 
     update() {
-        this.highScoreText.text = 'HS: ' + localStorage.getItem("highscore");
-  {
-     if (this.score > localStorage.getItem("highscore")) 
-        { 
-            localStorage.setItem("highscore", this.score);
-        }
-    }
+       
         if (this.gameOver && !this.endgame.isPlaying) {
             this.scene.start('EndGame', { totalScore: this.score })
         }

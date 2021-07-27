@@ -23,7 +23,7 @@ var gameOver=false;
 var game = new Phaser.Game(config);  
 
 function preload() {
-   this.load.image('sky', 'space3.png');
+   this.load.image('sky', 'sky.png');
     this.load.image('jet', 'jet.png');
     this.load.image('bomb', 'bomb.png');
     this.load.image('ammo', 'ammo.png');

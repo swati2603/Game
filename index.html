@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Phaser Game</title>
+    <link rel="stylesheet" href="main.css">
     <script src="phaser.min.js"></script>
-   
-   <script src="StartGameScene.js"></script>
-   <script src="playgamescene.js"></script>
-   <script src="endgamescene.js"></script>
-   <script src="spacegame.js"></script>
+    <script src="startgamescene.js"></script>
+    <script src="playgamescene.js"></script>
+    <script src="endgamescene.js"></script>
+    <script src="spacegame.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
 </head>
 
 <body>
+    <p>
+        <form>
+            <input for = "Name" class = "FontStyles" id = "inputVal">
+                    Please enter your Name
+            <button type = "button" onclick = "Submitted()"  class = "btn btn-primary">Submit</button>
+            </input>
+        </form>
+    </p>
+    <p id="Name Updater">
+        Welcome to the game 
+    </p>
 
+    <script>
+        function Submitted() {
+            let ele = document.getElementById("inputVal").value;
+            document.getElementById("Name Updater").innerHTML = "Welcome to the game "+ele;
+        }
+    </script>
 </body>
 
+</html>
 </html>

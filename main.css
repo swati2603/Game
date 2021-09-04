@@ -1,0 +1,11 @@
+.FontStyles{
+    font-family:'Roboto', sans-serif;
+    font-size: large;
+    font-weight: 400;
+}
+
+.FontSecondary {
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-weight: 400;
+    font-size:medium;
+}
